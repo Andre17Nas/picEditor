@@ -1,4 +1,5 @@
 # picEditor
+App que demonstra os efeitos em uma imagem de algoritmos de processamento de imagem utilizando OpenCV!
 Ao navegar pela seekBar nota-se os efeitos individuais aplicados na imagem.
 Algoritmos: Gaussian Blur & Threshold
 
