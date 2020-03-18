@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#333"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/img_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:src="@drawable/ic_image_black_24dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        app:layout_constraintTop_toBottomOf="@id/img_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Gaussian Blur"
+            android:textColor="#fff"
+            android:textSize="14dp"/>
+
+        <!-- 1  10 -->
+
+        <SeekBar
+            android:id="@+id/seek_gaussian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:min="1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Threshould Binary"
+            android:textColor="#fff"
+            android:textSize="14dp"/>
+
+        <!-- 1   127   255 -->
+
+        <SeekBar
+            android:id="@+id/seek_threshold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:progress="127"
+            android:min="0"/>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:onClick="onClick"
+            android:background="@drawable/ic_delete_black_24dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
